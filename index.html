@@ -101,7 +101,7 @@
 </script>
   <body>
 
-<h1>Happy Birthday Raghad 💖</h1>
+<h1 id="typingTitle"></h1>
 <p>I'm really glad I met you. Today is yours — and I'm smiling because of you.</p>
 <div class="gallery">
   <img src="photo1.jpg" alt="Memory 1">
@@ -118,5 +118,20 @@
     document.getElementById("music").play();
   }
 </script>
-  </body>
+ <script>
+  const titleText = "Happy Birthday Raghad 💖";
+  let i = 0;
+
+  function typeTitle() {
+    if (i < titleText.length) {
+      document.getElementById("typingTitle").innerHTML += titleText.charAt(i);
+      i++;
+      setTimeout(typeTitle, 80);
+    }
+  }
+
+  window.onload = typeTitle;
+</script>
+
+</body>
 </html>
