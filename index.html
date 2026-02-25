@@ -81,50 +81,7 @@
 }
   </style>
 </head>
-  <h1 id="typing"></h1>
-
-<div id="textMessage" class="message"></div>
-<button onclick="nextMessage()" id="btn">Click Me 🎁</button>
-
-<script>
-
-// Typing animation
-let text = "Happy Birthday Raghad 💖";
-let index = 0;
-
-function typeEffect() {
-    if (index < text.length) {
-        document.getElementById("typing").innerHTML += text.charAt(index);
-        index++;
-        setTimeout(typeEffect, 100);
-    } else {
-        document.getElementById("btn").style.display = "inline-block";
-    }
-}
-
-typeEffect();
-
-// Progressive messages
-let clickCount = 0;
-
-function nextMessage() {
-    clickCount++;
-    let msg = document.getElementById("textMessage");
-    msg.style.display = "block";
-
-    if (clickCount === 1) {
-        msg.innerHTML = "🎂 You make ordinary days feel special.";
-        document.getElementById("btn").innerText = "Click Again ❤️";
-    } 
-    else if (clickCount === 2) {
-        msg.innerHTML = "💖 Even from miles away, you're still my favorite person.";
-        document.getElementById("btn").innerText = "One More Time ✨";
-    } 
-    else if (clickCount === 3) {
-        msg.innerHTML = "✨ I'm really glad I met you. Today is yours — and I'm smiling because of you.";
-        document.getElementById("btn").innerText = "Happy Birthday Raghad 💕";
-    }
-}
+  
 <script>
   function createHeart() {
     const heart = document.createElement("div");
@@ -161,6 +118,28 @@ function nextMessage() {
   function playMusic() {
     document.getElementById("music").play();
   }
+</script>
+<script>
+  function playMusic() {
+    document.getElementById("music").play();
+  }
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const titleText = "Happy Birthday Raghad 💖";
+    let i = 0;
+
+    function typeTitle() {
+      if (i < titleText.length) {
+        document.getElementById("typingTitle").innerHTML += titleText.charAt(i);
+        i++;
+        setTimeout(typeTitle, 80);
+      }
+    }
+
+    typeTitle();
+  });
 </script>
 
 </body>
