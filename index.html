@@ -79,6 +79,17 @@
 .gallery img:hover {
   transform: scale(1.08);
 }
+    .footer {
+  margin-top: 40px;
+  font-size: 14px;
+  opacity: 0.8;
+  animation: fadeIn 3s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 0.8; }
+}
   </style>
 </head>
   
@@ -119,11 +130,6 @@
     document.getElementById("music").play();
   }
 </script>
-<script>
-  function playMusic() {
-    document.getElementById("music").play();
-  }
-</script>
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
@@ -141,6 +147,9 @@
     typeTitle();
   });
 </script>
-
+<footer class="footer">
+  Made with ❤️ by Suraj
+</footer>
+    
 </body>
 </html>
