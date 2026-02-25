@@ -99,20 +99,6 @@
 
   setInterval(createHeart, 400);
 </script>
- <script>
-  const text = "I'm really glad I met you. Today is yours — and I'm smiling because of you 💖";
-  let index = 0;
-
-  function typeEffect() {
-    if (index < text.length) {
-      document.getElementById("typing").innerHTML += text.charAt(index);
-      index++;
-      setTimeout(typeEffect, 50);
-    }
-  }
-
-  window.onload = typeEffect;
-</script> 
   <body>
 
 <h1>Happy Birthday Raghad 💖</h1>
@@ -132,5 +118,19 @@
     document.getElementById("music").play();
   }
 </script>
-</body>
+<script>
+  const text = "I'm really glad I met you. Today is yours — and I'm smiling because of you 💖";
+  let index = 0;
+
+  function typeEffect() {
+    if (index < text.length) {
+      document.getElementById("typing").innerHTML += text.charAt(index);
+      index++;
+      setTimeout(typeEffect, 50);
+    }
+  }
+
+  window.onload = typeEffect;
+</script>
+  </body>
 </html>
