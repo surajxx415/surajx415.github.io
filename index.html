@@ -4,6 +4,20 @@
   <meta charset="UTF-8">
   <title>Happy Birthday Raghad ❤️</title>
   <style>
+    <script>
+  const text = "I'm really glad I met you. Today is yours — and I'm smiling because of you 💖";
+  let index = 0;
+
+  function typeEffect() {
+    if (index < text.length) {
+      document.getElementById("typing").innerHTML += text.charAt(index);
+      index++;
+      setTimeout(typeEffect, 50);
+    }
+  }
+
+  window.onload = typeEffect;
+</script>
     body {
       margin: 0;
       height: 100vh;
@@ -117,20 +131,6 @@
   function playMusic() {
     document.getElementById("music").play();
   }
-</script>
-<script>
-  const text = "I'm really glad I met you. Today is yours — and I'm smiling because of you 💖";
-  let index = 0;
-
-  function typeEffect() {
-    if (index < text.length) {
-      document.getElementById("typing").innerHTML += text.charAt(index);
-      index++;
-      setTimeout(typeEffect, 50);
-    }
-  }
-
-  window.onload = typeEffect;
 </script>
   </body>
 </html>
